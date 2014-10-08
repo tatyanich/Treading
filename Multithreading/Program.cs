@@ -11,7 +11,8 @@ namespace ConsoleApplication1
         static public double[,] Multiply(Matrix mas, int a)
         {   Block[][] blocks;
             int n;
-            int newVariable; 
+            int newVariable;    // HAHA, I see you
+            int newVariableFromDanil;
             // TODO razmer bloka eto ne massiv, nado vynesty ego v peremennie 'x' i 'y' - eto ya dobavil
             double [,] block = new double[2,2];
             if (mas.n% block.Length > 0) {
