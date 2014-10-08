@@ -9,25 +9,37 @@ namespace ConsoleApplication1
     class Program
     { 
         static public double[,] Multiply(Matrix mas, int a)
-        {   Block[][] blocks;
+        {   Block[,] blocks;
+        int x = 2;
+        int y = 2;
+
             int n;
-            int newVariable;    // HAHA, I see you
-            int newVariableFromDanil;
-            // TODO razmer bloka eto ne massiv, nado vynesty ego v peremennie 'x' i 'y' - eto ya dobavil
-            double [,] block = new double[2,2];
-            if (mas.n% block.Length > 0) {
-                n = mas.n /block.Length + 1;
-               
-            } 
+             int m;
+            
+            //Dobavila peremennue no vot kak izvlech dlinny Matrix mas ne uverenna chto pravilno
+            if (mas.n % x > 0)
+            {
+                n = mas.n / x + 1;
+            }
             else
-                n = mas.n /block.Length;
-        blocks = new Block[n][];
+            {
+                n = mas.n / x;
+            }
+            if (mas.m % y > 0)
+            {
+                m = mas.m / y + 1;
+            }
+            else
+            {
+                m = mas.m / y;
+            }
+        blocks = new Block[n,m];
            // double [][] res = new double[mas.Length][];
-           // for(int i=0; i<mas.Length; i++){
+            for(int i=0; i<n; i++){
            //     res[i] = new double[mas[i].Length];
 
-           //  for(int j=0; j<mas[i].Length; j++){
-                
+             for(int j=0; j<m; j++){
+                blocks[i/n,j/n].add(new Index(i,j));// Dobavila vot eto no uverenna potomu cht ne pashet
            //      if
            //      //mas[i][j] = mas[i][j] * a;
            // }
