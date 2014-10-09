@@ -7,23 +7,33 @@ namespace ConsoleApplication1
 {
     class Block
     {
-        private List<Index> block = new List<Index>();
+        private List<Index> indexes = new List<Index>();
         
-        private Block(Index index) {
-             block.Add(index);
+        public Block() {
+             
 
         }
-
-        private void AddIndexes(Index index)
+        public override string ToString()
+        {  string str = "(";
+        for (int i = 0; i < indexes.Count; i++)
         {
-            block.Add(index);
+
+            str += indexes[i] + ",";
+            }
+            return str + ")";
+        }
+            
+        
+        public void AddIndexes(Index index)
+        {
+            indexes.Add(index);
         }
 
         public List<Index> Indexes    
         {
             get
             {
-                return block;
+                return indexes;
             }
         }
     }

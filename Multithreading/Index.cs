@@ -29,6 +29,10 @@ namespace ConsoleApplication1
                 return j;
             }
         }
+        public override string ToString()
+        {
+            return "[" + i + "," + j + "]";
+        }
 
     }
 }
