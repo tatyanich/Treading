@@ -101,9 +101,11 @@ namespace ConsoleApplication1
                 new double[] {3,2,4,6,7,1},
                 new double[] {9,10,5,4,3,0}
                };
+
             int b = 2;
             Matrix mass = new Matrix(arr);
             Multiply(mass, b);
+
 
             for (int i = 0; i <mass.Rows(); i++)
             {
