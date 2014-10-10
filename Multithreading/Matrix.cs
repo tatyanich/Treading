@@ -11,8 +11,7 @@ namespace ConsoleApplication1
      
 
         public Matrix(double[][] arr) {
-           // N = p1;
-           // M = p2;
+          
             matrix = arr;
                 
         }
